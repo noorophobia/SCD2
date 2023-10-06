@@ -205,8 +205,8 @@ public class q1 {
 	
 	
 	
-	
-	
+	 
+
 	
 	
 	
