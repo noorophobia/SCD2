@@ -3,9 +3,18 @@ import java.util.*;
 public class IntervalMerge {
 	 
 	public void show(int arr[]) {
+		System.out.print( "[");
+
 		for(int j=0;j<arr.length;j++) {
-			System.out.print(arr[j]);
-		}
+			if(j==arr.length-1) {
+				System.out.print(arr[j]);
+
+			}
+			else {
+			System.out.print(arr[j]+ ",");
+		}}
+		System.out.print( "]");
+
 		System.out.println(" ");
 
 	}
@@ -19,14 +28,8 @@ public class IntervalMerge {
  
  		for(int i=1;i<intervals.size();i++) {
 			  length= (intervals.get(i).length-1);
-			//	System.out.println("intervals.get(i)[length-1] "+  secondElement);
-
-				//System.out.println("intervals.get(i)[length-1] "+intervals.get(i)[length]+ "<=firstElement"+ firstElement);
-
-				System.out.println("intervals.get(i).length "+intervals.get(i).length );
-				System.out.println("intervals.get(i)[0] "+intervals.get(i)[0]+ "<=firstElement"+ firstElement);
-				System.out.println("intervals.get(i)[length-1] "+intervals.get(i)[length]+ "<=firstElement"+ firstElement);
-
+ 
+				 
  			 if(intervals.get(i)[0]>=firstElement && intervals.get(i)[0]<=secondElement )
  			 {
  				 
@@ -35,8 +38,7 @@ public class IntervalMerge {
  
  					int arr[]=intervals.get(0);
  					int arr2[]=intervals.get(1);
- 	 				show(arr);
- 	 				
+  	 				
  	 				arr[length]=arr2[length];
  	 				 
  	 				intervals.set(0, arr);
